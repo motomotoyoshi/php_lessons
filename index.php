@@ -1,19 +1,12 @@
 <?php 
 
-//$x = 5;
-//if($x){
-//  echo "great";
+$i = 0;
+//while($i < 10){
+//  echo $i;
+//  $i++;
 //}
 
-$a = 8;
-$b = 5;
-
-$max = ($a > $b) ? $a : $b;
-
-if($a > $b){
-  $max = $a;
-}else{
-  $max = $b;
-}
-
-echo $max;
+do {
+  echo $i;
+  $i++;
+}while($i < 10);
