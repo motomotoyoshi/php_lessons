@@ -1,11 +1,19 @@
 <?php 
 
-$score = 8;
+//$x = 5;
+//if($x){
+//  echo "great";
+//}
 
-if ($score > 80) {
-  echo "great!";
-} elseif ($score > 60) {
-  echo "good";
-} else {
-  echo "so so ...";
+$a = 8;
+$b = 5;
+
+$max = ($a > $b) ? $a : $b;
+
+if($a > $b){
+  $max = $a;
+}else{
+  $max = $b;
 }
+
+echo $max;
