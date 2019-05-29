@@ -1,8 +1,11 @@
 <?php 
 
-$name = "hoge";
-$s1 = "Hello $name ! \n Hello again!";
-$s2 = 'Hello $name ! \n Hello again!';
+$score = 8;
 
-var_dump($s1);
-var_dump($s2);
+if ($score > 80) {
+  echo "great!";
+} elseif ($score > 60) {
+  echo "good";
+} else {
+  echo "so so ...";
+}
