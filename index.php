@@ -1,9 +1,7 @@
 <?php 
 
-define("MY_EMAIL", "hoge@example.com");
+$x = 5;
+$x = $x * 2;
+$x *= 2;
 
-echo MY_EMAIL;
-
-var_dump(__LINE__);
-var_dump(__FILE__);
-var_dump(__DIR__);
+var_dump($x);
