@@ -1,7 +1,8 @@
 <?php 
 
-$x = 5;
-$x = $x * 2;
-$x *= 2;
+$name = "hoge";
+$s1 = "Hello $name ! \n Hello again!";
+$s2 = 'Hello $name ! \n Hello again!';
 
-var_dump($x);
+var_dump($s1);
+var_dump($s2);
