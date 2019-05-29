@@ -1,11 +1,9 @@
 <?php 
-// コメント
-# コメント
 
-/*
-コメント
-*/
+define("MY_EMAIL", "hoge@example.com");
 
-$msg = "Hello from the TOP!";
-echo $msg;
-var_dump($msg);
+echo MY_EMAIL;
+
+var_dump(__LINE__);
+var_dump(__FILE__);
+var_dump(__DIR__);
