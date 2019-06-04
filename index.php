@@ -1,20 +1,28 @@
 <?php 
 
-// &sales = array(
-//   "hoge" => 200,
-//   "hage" => 900,
-//   "foo" => 3000,
-// );
-
-$sales = [
-  "hoge" => 200,
-  "hage" => 900,
-  "foo" => 3000,
-];
-
-var_dump($sales["foo"]);
-$sales["foo"] = 4000;
-var_dump($sales["foo"]);
+//$sales = [
+//  "hoge" => 200,
+//  "hage" => 900,
+//  "foo" => 3000,
+//];
+//
+//foreach($sales as $key => $value){
+//  echo "($key) $value ";
+//}
 
 $colors = ["red", "blue", "pink"];
-var_dump($colors[2]);
+foreach($colors as $value){
+  echo "$value ";
+}
+
+//foreach($colors as $value):
+//  echo "$value ";
+//endforeach;
+
+?>
+
+<ul>
+  <?php foreach($colors as $value):?>
+  <li><?php echo "$value ";?></li>
+  <?php endforeach ?>
+</ul>
