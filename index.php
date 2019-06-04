@@ -1,12 +1,20 @@
 <?php 
 
-$i = 0;
-//while($i < 10){
-//  echo $i;
-//  $i++;
-//}
+// &sales = array(
+//   "hoge" => 200,
+//   "hage" => 900,
+//   "foo" => 3000,
+// );
 
-do {
-  echo $i;
-  $i++;
-}while($i < 10);
+$sales = [
+  "hoge" => 200,
+  "hage" => 900,
+  "foo" => 3000,
+];
+
+var_dump($sales["foo"]);
+$sales["foo"] = 4000;
+var_dump($sales["foo"]);
+
+$colors = ["red", "blue", "pink"];
+var_dump($colors[2]);
