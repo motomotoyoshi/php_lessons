@@ -1,25 +1,25 @@
 <?php 
 
 class User {
-  //private $name;
-  //public $name;
-  protected  $name;
-
+  public $name;
+  public static $count = 0;
   public function __construct($name){
     $this->name = $name;
+    self::$count++;
   }
 
   public function sayHi(){
     echo "Hi, i am $this->name!";
   }
-}
-
-class adminUser extends User{
-  public function sayHello(){
-    echo "Hello, from $this->name!";
+  public static function getMessage(){
+    echo "Hello from User class!";
   }
 }
 
-$tom = new User("Tom");
-$steave = new adminUser("Steave");
-$steave->sayHello();
+//User::getMessage();
+
+$Tom = new User("Tom");
+$Bob = new User("Bob");
+$Pop = new User("Pop");
+
+echo User::$count;
