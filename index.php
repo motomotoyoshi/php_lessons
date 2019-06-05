@@ -1,21 +1,10 @@
 <?php 
 
-interface sayHi {
-  public function sayHi();
-}
+//require "User.class.php";
 
-interface sayHello {
-  public function sayHello();
-}
-
-class User implements sayHi, sayHello {
- public function sayHi(){
-  echo "hi!";
- } 
- public function sayHello(){
-  echo "sayHello";
-  }
-}
+spl_autoload_register(function($class) {
+  require $class . ".class.php";
+});
 
 $ppp = new User("ppp");
 $ppp->sayHello();
