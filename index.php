@@ -1,12 +1,17 @@
 <?php 
 
-require "User.class.php";
-//use motomoto\Lib as lib;
-use motomoto\Lib;
+function div($a, $b){
+  try {
+    if ( $b === 0) {
+      throw new Exception("cannot divide by 0!");
+    }
+    echo $a / $b;
+  } catch (Exception $e) {
+    echo $e->getMessage();
+  }
+}
 
-spl_autoload_register(function($class) {
-  require $class . ".class.php";
-});
+div (7, 2);
+div (5, 0);
 
-$ppp = new Lib\User("ppp");
-$ppp->sayHello();
+
