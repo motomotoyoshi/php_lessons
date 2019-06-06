@@ -1,6 +1,9 @@
 <?php 
 
-//setcookie("username", "foo", time()+60*60);
-setcookie("username", "foo", time()-60*60);
+session_start();
 
-echo $_COOKIE['username'];
+//$_SESSION['username'] = "foo";
+
+//echo $_SESSION['username'];
+//unset($_SESSION['username']);
+echo $_SESSION['username'];
