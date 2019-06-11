@@ -1,21 +1,10 @@
 <?php 
 
-$nums = [];
+require_once(__DIR__ . '/config.php');
+require_once(__DIR__ . '/bingo.php');
 
-for ($i = 0; $i < 5; $i++) {
-  $col = range($i * 15 + 1, $i * 15 + 15);
-  shuffle($col);
-  $nums[$i] = array_slice($col, 0, 5);
-}
-
-$nums[2][2] = "FREE";
-
-//var_dump($nums);
-//exit;
-
-function h($s) {
-  return htmlspecialchars($s, ENT_QUOTES, 'utf-8');
-}
+$bingo = new \MyApp\Bingo();
+$nums = $bingo->create();
 
 ?>
 <!DOCTYPE html>
