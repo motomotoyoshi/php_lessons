@@ -1,9 +1,6 @@
 <?php 
 
-session_start();
+$animals = ["cat", "dog", "bird", "fish"];
 
-$_SESSION['username'] = "foo";
-
-//echo $_SESSION['username'];
-//unset($_SESSION['username']);
-echo $_SESSION['username'];
+echo $animals[mt_rand(0, 3)] . "\n";
+echo count($animals);
