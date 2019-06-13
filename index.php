@@ -1,6 +1,9 @@
 <?php 
 
-$animals = ["cat", "dog", "bird", "fish"];
+$s = "banana";
+$n = 30;
+$p = 5.32;
 
-echo $animals[mt_rand(0, 3)] . "\n";
-echo count($animals);
+//printf("We have %04d %ss for $%.2f", $n, $s, $p );
+$result = sprintf("We have %04d %ss for $%.2f", $n, $s, $p );
+echo $result;
