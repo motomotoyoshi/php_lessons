@@ -1,9 +1,25 @@
 <?php 
 
-var_dump(time());
-var_dump(mktime(10,55,00,6,13,2019));
-var_dump(strtotime("last sunday"));
-var_dump(strtotime("+ 1hour"));
+$testFile = "test.dat";
+$contents = "こんちくわ！";
 
-echo date("Y-m-d H:i:s", strtotime("last sunday"));
-echo date("z", strtotime("last sunday"));
+if (is_writable($testFile)) {
+  //$fp fopen($testFile, "a");
+  if (!$fp = fopen($testFile, "a")) {
+    echo "could not open!";
+    exit;
+  }
+
+  if (fwrite($fp, $contents) === false){
+    echo "could not write!";
+    exit;
+  }
+
+  echo "success!";
+
+  fclose($fp);
+
+} else {
+  echo "not writable!";
+  exit;
+}
