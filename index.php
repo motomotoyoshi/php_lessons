@@ -1,16 +1,9 @@
 <?php 
 
-$members = ["ishida", "imamura", "isogai", "iwata", "okada"];
+var_dump(time());
+var_dump(mktime(10,55,00,6,13,2019));
+var_dump(strtotime("last sunday"));
+var_dump(strtotime("+ 1hour"));
 
-//echo count($members);
-
-sort($members);
-//var_dump($members);
-
-if (in_array("sugahara", $members)) echo "minami!!";
-
-//echo implode("@", $members);
-
-$atstr = implode("@", $members);
-//var_dump($atstr);
-var_dump(explode("@", $atstr));
+echo date("Y-m-d H:i:s", strtotime("last sunday"));
+echo date("z", strtotime("last sunday"));
