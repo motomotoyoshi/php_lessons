@@ -1,9 +1,16 @@
 <?php 
 
-$s = "banana";
-$n = 30;
-$p = 5.32;
+$members = ["ishida", "imamura", "isogai", "iwata", "okada"];
 
-//printf("We have %04d %ss for $%.2f", $n, $s, $p );
-$result = sprintf("We have %04d %ss for $%.2f", $n, $s, $p );
-echo $result;
+//echo count($members);
+
+sort($members);
+//var_dump($members);
+
+if (in_array("sugahara", $members)) echo "minami!!";
+
+//echo implode("@", $members);
+
+$atstr = implode("@", $members);
+//var_dump($atstr);
+var_dump(explode("@", $atstr));
