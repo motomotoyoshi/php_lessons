@@ -19,20 +19,13 @@ try {
   $db = new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD);
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  $stmt = $db->prepare("update users set score = :score where name = :name");
-  $stmt->execute([
-    ':score' => 100,
-    ':name' => 'okipo'
-  ]);
-  echo 'row updated: ' . $stmt->rowCount();
-
-  $stmt = $db->prepare("delete from  users where name = :name");
-  $stmt->execute([
-    ':name' => 'yura'
-  ]);
-  echo 'row deleted: ' . $stmt->rowCount();
+  $db->beginTransaction();
+  $db->exec("update users set score = score -10 where name = 'okipo'");
+  $db->exec("update users set score = score +10 where name = 'myq'");
+  $db->commit();
 
 } catch (PDOException $e) {
+  $db->rollback();
   echo $e->getMessage();
   exit;
 }
